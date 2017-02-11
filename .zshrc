@@ -87,11 +87,9 @@
 export TERM="xterm-256color"
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
-source /usr/share/zsh-antigen/antigen.zsh
+source .antigen/antigen.zsh
 
 antigen use oh-my-zsh
-
-
 
 antigen bundle git
 antigen bundle extract
@@ -103,6 +101,8 @@ antigen bundle colored-man-pages
 antigen bundle zsh-users/zsh-completions src
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-syntax-highlighting
+
+# antigen theme agnoster
 
 POWERLEVEL9K_MODE='awesome-patched'
 
@@ -141,17 +141,17 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS=true
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+DEFAULT_USER=`whoami`
+#export http_proxy=http://proxy.ixl.fr:3128
+#export https_proxy=$http_proxy
+#export HTTP_PROXY=$http_proxy
 
-export http_proxy=http://proxy.ixl.fr:3128
-export https_proxy=$http_proxy
-export HTTP_PROXY=$http_proxy
+#alias aff3ct='./home/tibo/AFFECT/aff3ct/build/bin/aff3ct'
+#alias rahan='ssh ttonnellier@192.168.222.115'
 
-alias aff3ct='./home/tibo/AFFECT/aff3ct/build/bin/aff3ct'
-alias rahan='ssh ttonnellier@192.168.222.115'
-
-source /home/tibo/AFFECT/aff3ct/aff3ct_completion.sh
-source /opt/intel/bin/iccvars.sh -arch intel64 -platform linux
-source /opt/intel/bin/compilervars.sh -arch intel64 -platform linux
+#source /home/tibo/AFFECT/aff3ct/aff3ct_completion.sh
+source /opt/intel/bin/iccvars.sh  intel64
+source /opt/intel/bin/compilervars.sh  intel64
 
 
 
